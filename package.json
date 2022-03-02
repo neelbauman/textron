@@ -1,0 +1,30 @@
+{
+  "name": "textron",
+  "version": "1.0.0",
+  "description": "test",
+  "homepage": "https://foo.bar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yuichiro Noguchi <exp.noymann@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^16.4.10",
+    "@types/react": "^17.0.15",
+    "@types/react-dom": "^17.0.9",
+    "electron-builder": "^22.9.1",
+    "electron-reload": "^2.0.0-alpha.1",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
+    "electron": "^13.1.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  }
+}

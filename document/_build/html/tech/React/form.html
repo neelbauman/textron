@@ -1,0 +1,892 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3.3.5. フォーム &#8212; Textron0.0.0</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/react.production.min.js"></script>
+    <script src="../../_static/react-dom.production.min.js"></script>
+    <script src="../../_static/plotly-latest.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="3.4. Python" href="../python/index.html" />
+    <link rel="prev" title="3.3.4. リストとkey" href="list%26key.html" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Textron0.0.0</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../physics/index.html">
+   1. 物理
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../physics/qf_theory/index.html">
+     1.1. 場の量子論
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../physics/qf_theory/note01.html">
+       1.1.1. 場の量子論ノート（7月）
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../physics/qf_theory/note02.html">
+       1.1.2. 場の量子論ノート（7月）
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../physics/qf_theory/note03.html">
+       1.1.3. 場の量子論ノート（7月）
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../physics/quantum_espresso/index.html">
+     1.2. Quantum Espresso
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../physics/quantum_espresso/note001.html">
+       1.2.1. 水素化物ペロブスカイトの状態計算
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../physics/quantum_espresso/note002.html">
+       1.2.2. KLiH3のconvex hull計算
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../physics/quantum_espresso/convex_hull.html">
+       1.2.3. Convex_Hullの計算
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../physics/quantum_espresso/erros.html">
+       1.2.4. ErrorとSTOPについて
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../physics/quantum_espresso/prmt_list.html">
+       1.2.5. 計算の結果（正常終了かエラー）とパラメータの関係表
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../physics/plasma/index.html">
+     1.3. プラズマ物理
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../physics/plasma/note001.html">
+       1.3.1. プラズマクラスターとか。
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../physics/ss_physics/index.html">
+     1.4. 固体物理学
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../math/index.html">
+   2. 数学
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   3. 技術
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../tech_abstruct/index.html">
+     3.1. 技術一般論
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tech_abstruct/async.html">
+       3.1.1. 非同期処理について
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../javascript/index.html">
+     3.2. JavaScript
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../javascript/runtime.html">
+       3.2.1. Javascriptのランタイムについて
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../javascript/this.html">
+       3.2.2. JavaScriptのthisについて
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../javascript/plotly.html">
+       3.2.3. plotly.jsでインタラクティブなグラフを描画する
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="index.html">
+     3.3. React
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="state_lifecycle.html">
+       3.3.1. ComponentのStateとライフサイクル
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="event_handling.html">
+       3.3.2. イベント処理
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="condition_render.html">
+       3.3.3. 条件付きレンダー
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="list%26key.html">
+       3.3.4. リストとkey
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       3.3.5. フォーム
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../python/index.html">
+     3.4. Python
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../python/matplotlib.html">
+       3.4.1. matplotlib
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../machine_learning_intro/index.html">
+     3.5. 機械学習概論ノート
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note01.html">
+       3.5.1. 第１回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note02.html">
+       3.5.2. 第２回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note03.html">
+       3.5.3. 第３回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note04.html">
+       3.5.4. 第４回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note05.html">
+       3.5.5. 第５回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note06.html">
+       3.5.6. 第６回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note07.html">
+       3.5.7. 第７回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note08.html">
+       3.5.8. 第８回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note09.html">
+       3.5.9. 第９回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note10.html">
+       3.5.10. 第１０回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note11.html">
+       3.5.11. 第１１回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note12.html">
+       3.5.12. 第１２回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note13.html">
+       3.5.13. 第１３回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note14.html">
+       3.5.14. 第１４回
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../project/index.html">
+   4. プロジェクト
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../project/textron/index.html">
+     4.1. Textron
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../project/textron/textron.html">
+       4.1.1. Textronとは
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../project/shisohca/index.html">
+     4.2. SHISOHCA
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../project/shisohca/eigen_bases/index.html">
+       4.2.1. Eigen_States
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+      <label for="toctree-checkbox-14">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../project/shisohca/eigen_bases/plan.html">
+         企画：EigenStates
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../project/phrase/index.html">
+     4.3. 言葉の断片たち
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+    <label for="toctree-checkbox-15">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../project/phrase/lyrics/index.html">
+       4.3.1. 歌詞
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+      <label for="toctree-checkbox-16">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../project/phrase/lyrics/%E3%81%95%E3%82%88%E3%81%AA%E3%82%89%E6%9C%AA%E6%9D%A5.html">
+         さよなら未来
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../project/phrase/novel/index.html">
+       4.3.2. 小説
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+      <label for="toctree-checkbox-17">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../project/phrase/novel/note001.html">
+         家長の心配 / カフカ
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/tech/React/form.rst.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   制御されたコンポーネント
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#textareta">
+     textaretaタグ
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#select">
+     selectタグ
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#file-input">
+     file inputタグ
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   複数の入力の処理
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#null">
+     制御された入力におけるnull値
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   制御されたコンポーネントの代替手段
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   本格的なソリューション
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   コードの実装例
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="id1">
+<h1><span class="section-number">3.3.5. </span>フォーム<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>HTMLのフォーム要素は当然のこととして内部に何らかの状態を持っているので、フォーム要素はReactにおいて他のDOM要素とは少し異なる振る舞いをする。例えば、次のプレーンHTMLによるフォームは、一つの名前を受け付ける。</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>
+        Name:
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;name&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Submit&quot;</span><span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>このフォームは、ユーザーがフォームを送信した際に新しいページに移動する、というい、HTMLフォームとしてのデフォルトの動作をする。Reactでこの振る舞いが必要なら、そのままでそのような動作をする。しかし大抵のケースでは、フォームに入力されたデータに手を入れることなく送信してページ遷移するということはほとんどなく、むしろ、フォームの送信に応答してユーザがフォームに入力したデータにアクセスするようなJsの関数が存在する。</p>
+<div class="line-block">
+<div class="line">このような挙動をReactにおいて実現するためには、”制御されたコンポーネント”（controlled component）と呼ばれるテクニックを使うことである。</div>
+</div>
+<div class="section" id="id2">
+<h2>制御されたコンポーネント<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>HTMLでは&lt;input&gt;、&lt;textarea&gt;、そして&lt;select&gt;のようなフォーム要素は通常、自身である状態を保持しており、ユーザの入力に基づいてそれを更新する。Reactでは、コンポーネントが保持している変更されうる状態は通常はコンポーネントのstateプロパティに保持され、setState()関数のみがそれを変更する窓口である。</p>
+<div class="line-block">
+<div class="line">Reactのstateを”信頼できる唯一の情報源”とすることで、上述の２つの状態（HTMLフォームが原理的に持つ状態と、Reactのstateにより保持される状態）を結合させることができる。そうすることで、フォームをレンダーしているReactコンポーネントが、後続するユーザ入力でフォームで起きることも制御できるようになる。このような方法でReactによって値が制御される入力フォーム要素は、「制御されたフォームコンポーネント」と呼ばれる。</div>
+</div>
+<div class="line-block">
+<div class="line">たとえば、前述のフォームの例において、フォーム送信時に名前をログに残すようにしたい場合、フォームを制御されたコンポーネントとして書くことができる：</div>
+</div>
+<div class="highlight-jsx notranslate"><div class="highlight"><pre><span></span>class NameForm extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {value: &#39;&#39;};
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({value: event.target.value});
+    }
+
+    handleSubmit(event) {
+        alert(&#39;A name was submitted: &#39; + this.state.value);
+        event.preventDefault();
+    }
+
+    render() {
+        return (
+            &lt;form onSubmit={this.handleSubmit}&gt;
+                &lt;label&gt;
+                    Name:
+                    &lt;input type=&quot;text&quot; value={this.state.value} onChange={this.handleChange}/&gt;
+                &lt;/label&gt;
+                &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+            &lt;/form&gt;
+        );
+    }
+}
+</pre></div>
+</div>
+<p>フォーム要素のvalue属性が設定されているので、表示される値は常にthis.state.valueとなり、Reactのstateが信頼できる情報源となる。handleChangeはキーストロークごとに実行されてReactのstateを更新するので、表示される値はユーザがタイプするたびに更新される。</p>
+<div class="line-block">
+<div class="line">制御されたコンポーネントを使うと、ユーザ入力の値は常にReactのstateによって制御されるようになる。これによりタイプするコード量は少し増えるが、その値を他のUI要素に渡したり、他のイベントハンドラからリセットしたりできるようになる。</div>
+</div>
+<div class="section" id="textareta">
+<h3>textaretaタグ<a class="headerlink" href="#textareta" title="Permalink to this headline">¶</a></h3>
+<p>HTMLでは、&lt;textarea&gt;要素はテキストを子要素として定義する！</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">textareta</span><span class="p">&gt;</span>
+    Hello there, this is some text in a text areta
+<span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Reactでは、&lt;textarea&gt;は変わりにvalue属性を使用する。こうすることで、&lt;textarea&gt;を使用するフォームは単一行の入力フォーム&lt;input type=”text”/&gt;と非常に似た書き方ができるようになる。</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span>class EssayForm extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: &#39;Please write an essay about your favorite DOM element&#39;
+        };
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({value: event.target.value});
+    }
+
+    handleSubmit(event) {
+        alert(&#39;An essay  was submitted: &#39; + this.state.value);
+        event.preventDefault();
+    }
+
+    // なぜrendr()メソッド中でのthis参照は、bindせずともerrorにならないのかといえば、Reactが、JSXとクラスをきっちり結びつけて、constructorと同じ振る舞いになるようにスコープを制御してくれているからである。
+    render() {
+        return (
+            &lt;form onSubmit={this.handleSubmit}&gt;
+                &lt;label&gt;
+                    Essay:
+                    &lt;textarea value={this.state.value} onChange={this.handleChange}/&gt;
+                &lt;/label&gt;
+                &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+            &lt;/form&gt;
+        );
+    }
+}
+</pre></div>
+</div>
+<p>this.state.valueがコンストラクタで初期化されているので、テキストエリアには初めからテキストが入っていることに注意されたし。</p>
+</div>
+<div class="section" id="select">
+<h3>selectタグ<a class="headerlink" href="#select" title="Permalink to this headline">¶</a></h3>
+<p>HTMLでは、&lt;select&gt;は、&lt;option&gt;要素を子要素としてドロップダウンリストを作成する。たとえば次のHTMLは、味についてのドロップダウンリストを作成している。</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">select</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;grapefruit&quot;</span><span class="p">&gt;</span>Grapefruit<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;lime&quot;</span><span class="p">&gt;</span>Lime<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">selected</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;coconut&quot;</span><span class="p">&gt;</span>Coconut<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;mango&quot;</span><span class="p">&gt;</span>Mango<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>selected属性があるためCoconutオプションが最初に選択されている。このselected属性の代わりに、Reactでは、value属性を親のselectタグで使用する。一箇所で更新すればよいだけなので、制御されたコンポーネントを使う場合には便利である。たとえば：</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span>class FlavorForm extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {value: &#39;coconut&#39;};
+
+        this.handleChange = this.handleChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
+    }
+
+    handleChange(event) {
+        this.setState({value: event.target.value});
+    }
+
+    handleSubmit(event) {
+        alert(&#39;Your favorite flavor is: &#39; + this.state.value);
+        event.preventDefault();
+    }
+
+    render() {
+        return (
+            &lt;form onSubmit={this.handleSubmit}&gt;
+                &lt;label&gt;
+                    Pick your favorite flavor:
+                    &lt;select value={this.state.value} onChange={this.handleChange}&gt;
+                        &lt;option value=&quot;grapefruit&quot;&gt;Grapefruit&lt;/option&gt;
+                        &lt;option value=&quot;lime&quot;&gt;Lime&lt;/option&gt;
+                        &lt;option value=&quot;coconut&quot;&gt;Coconut&lt;/option&gt;
+                        &lt;option value=&quot;mango&quot;&gt;Mango&lt;/option&gt;
+                    &lt;/select&gt;
+                &lt;/label&gt;
+                &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;/&gt;
+            &lt;/form&gt;
+        );
+    }
+}
+</pre></div>
+</div>
+<p>この記法によって、全体的に&lt;input type=”text”&gt;, &lt;textarea&gt;, &lt;select&gt;が非常に似た記述と動作をするようになる。これらは全て、 <strong>制御されたコンポーネントを実装するときに使うことができるvalue属性を受け取る。</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<blockquote>
+<div><p>value属性に配列を渡すことで、selectタグ内の複数のオプションを選択することができる。</p>
+</div></blockquote>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nx">select</span> <span class="nx">multiple</span><span class="o">=</span><span class="p">{</span><span class="kc">true</span><span class="p">}</span> <span class="nx">value</span><span class="o">=</span><span class="p">{[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">]}</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="file-input">
+<h3>file inputタグ<a class="headerlink" href="#file-input" title="Permalink to this headline">¶</a></h3>
+<p>HTMLでは、&lt;input type=”file”&gt;によってユーザにデバイス内の一つ以上のファイルを選ばせてそれをサーバにアップロードしたりFileAPIをつかってJavaScriptで操作したりすることができる。</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;file&quot;</span><span class="p">/&gt;</span>
+</pre></div>
+</div>
+<p>この値は読み取り専用なので、これは非制御コンポーネントとなる。（非制御コンポーネントについては後述）</p>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>複数の入力の処理<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>複数の制御されたinput要素を処理する必要が在る場合、それぞれの入力要素にname属性を追加すれば、ハンドラ関数にevent.target.nameに基づいて処理を選択させるようにできる。
+singlettriplet
+abrakatabra
+たとえば：</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span>class Reservation extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isGoign: true,
+            numberOfGuests: 2
+        };
+
+        this.handeInputChange = this.handleInputChange.bind(this);
+    }
+
+    handleInputChange(event) {
+        const target = event.target;
+        const value = target.type === &#39;checkbox&#39; ? target.checked : target.value;
+        const name = target.name;
+
+        this.setState({
+            [name]: value
+        });
+    }
+
+    render() {
+        return (
+            &lt;form&gt;
+                &lt;label&gt;
+                    Is going:
+                    &lt;input
+                        name=&quot;isGoing&quot;
+                        type=&quot;checkbox&quot;
+                        checkd={this.state.isGoing}
+                        onChange={this.handleInputChange}/&gt;
+                        &lt;/label&gt;
+                    &lt;br/&gt;
+                &lt;label&gt;
+                    Number of Guests:
+                    &lt;input
+                        name=&quot;numberOfGuests&quot;
+                        type=&quot;number&quot;
+                        value={this.state.numbereOfGuests}
+                        onChange={this.handleInputChange}/&gt;
+                    &lt;/label&gt;
+                &lt;/form&gt;
+        );
+    }
+}
+</pre></div>
+</div>
+<div class="section" id="null">
+<h3>制御された入力におけるnull値<a class="headerlink" href="#null" title="Permalink to this headline">¶</a></h3>
+<p>制御されたコンポーネントで、valueプロパティに値を指定することで、変更させたくない場合にユーザが値を変更できないようになる。もしも、valueを指定したのに入力フィールドが依然として変更可能であるという場合は、valueをundefinedもしくはnullに設定してしまったのかもしれない。</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">input</span> <span class="nx">value</span><span class="o">=</span><span class="s2">&quot;hi&quot;</span><span class="o">/&gt;</span><span class="p">,</span> <span class="nx">mountNode</span><span class="p">);</span>
+
+<span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">input</span> <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="kc">null</span><span class="p">}</span><span class="o">/&gt;</span><span class="p">,</span> <span class="nx">mountNode</span><span class="p">);</span>
+<span class="p">},</span> <span class="mf">1000</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>制御されたコンポーネントの代替手段<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>制御されたコンポーネントは、あらゆる種類のデータの変更に対してイベントハンドラを書き、あらゆる入力状態をReactコンポーネントに通してやる必要があるため、時としてうんざりすることも在る。このことは、既存のコードベースをReactに変換する場合や、Reactアプリケーションをnon-Reactのライブラリと統合する場合に特に問題化する。これらの状況においては、入力フォームを実装するための代替手段であるところの非制御コンポーネントを検討して見る価値が在る。</p>
+</div>
+<div class="section" id="id5">
+<h2>本格的なソリューション<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>入力値のバリデーション、訪問済みのフィールドの追跡やフォーム送信を含む完全なソリューションがほしい場合は、Formikが人気のある選択肢の一つである。</p>
+<div class="line-block">
+<div class="line">しかしながらこれは制御されたコンポーネントやstateの管理と同じ原理で作成されているので、これらの基礎をしっかりと理解しておく必要が在る。</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>コードの実装例<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div id="root"></div><script type="text/javascript" async src="../../_static/tech/React/form.js"></script></div>
+</div>
+
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="list%26key.html" title="previous page"><span class="section-number">3.3.4. </span>リストとkey</a>
+    <a class='right-next' id="next-link" href="../python/index.html" title="next page"><span class="section-number">3.4. </span>Python</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By youri nichicough<br/>
+        
+            &copy; Copyright 2021, shisohca.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+
+
+
+  </body>
+</html>

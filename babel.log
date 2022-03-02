@@ -1,0 +1,23 @@
+SyntaxError: document/_static_src/demo.js: Unexpected token (11:2)
+   9 | 
+  10 | const element = {
+> 11 |   <h2>
+     |   ^
+  12 |     Hello, {formatName(user)}
+  13 |   </h2>
+  14 | }
+[BABEL] Note: The code generator has deoptimised the styling of "document/_static_src/mathjax/es5/tex-chtml.js" as it exceeds the max of "500KB".
+document/_static_src/mathjax/es5/tex-chtml.js -> document/_static/mathjax/es5/tex-chtml.js
+[BABEL] Note: The code generator has deoptimised the styling of "document/_static_src/plotly-latest.min.js" as it exceeds the max of "500KB".
+document/_static_src/plotly-latest.min.js -> document/_static/plotly-latest.min.js
+document/_static_src/react-dom.production.min.js -> document/_static/react-dom.production.min.js
+document/_static_src/react.production.min.js -> document/_static/react.production.min.js
+document/_static_src/tech/project/ui.js -> document/_static/tech/project/ui.js
+SyntaxError: document/_static_src/demo.js: Unexpected token (11:2)
+   9 | 
+  10 | const element = {
+> 11 |   <h2>
+     |   ^
+  12 |     Hello, {formatName(user)}
+  13 |   </h2>
+  14 | }

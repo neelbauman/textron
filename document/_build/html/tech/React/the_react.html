@@ -1,0 +1,749 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3.3.8. Reactの流儀 &#8212; Textron0.0.0</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/react.production.min.js"></script>
+    <script src="../../_static/react-dom.production.min.js"></script>
+    <script src="../../_static/plotly-latest.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="3.4. Python" href="../python/index.html" />
+    <link rel="prev" title="3.3.7. コンポジション vs 継承" href="composition.html" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Textron0.0.0</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../physics/index.html">
+   1. 物理
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../physics/qf_theory/index.html">
+     1.1. 場の量子論
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../physics/qf_theory/note01.html">
+       1.1.1. 場の量子論ノート（7月）
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../physics/qf_theory/note02.html">
+       1.1.2. 場の量子論ノート（7月）
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../physics/qf_theory/note03.html">
+       1.1.3. 場の量子論ノート（7月）
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../physics/quantum_espresso/index.html">
+     1.2. Quantum Espresso
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../physics/quantum_espresso/note001.html">
+       1.2.1. 水素化物ペロブスカイトの状態計算
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../physics/quantum_espresso/note002.html">
+       1.2.2. KLiH3のconvex hull計算
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../physics/quantum_espresso/convex_hull.html">
+       1.2.3. Convex_Hullの計算
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../physics/quantum_espresso/erros.html">
+       1.2.4. ErrorとSTOPについて
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../physics/quantum_espresso/prmt_list.html">
+       1.2.5. 計算の結果（正常終了かエラー）とパラメータの関係表
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../physics/plasma/index.html">
+     1.3. プラズマ物理
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../physics/plasma/note001.html">
+       1.3.1. プラズマクラスターとか。
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../physics/ss_physics/index.html">
+     1.4. 固体物理学
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../math/index.html">
+   2. 数学
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   3. 技術
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../tech_abstruct/index.html">
+     3.1. 技術一般論
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tech_abstruct/async.html">
+       3.1.1. 非同期処理について
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../javascript/index.html">
+     3.2. JavaScript
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../javascript/runtime.html">
+       3.2.1. Javascriptのランタイムについて
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../javascript/this.html">
+       3.2.2. JavaScriptのthisについて
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../javascript/plotly.html">
+       3.2.3. plotly.jsでインタラクティブなグラフを描画する
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="index.html">
+     3.3. React
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="state_lifecycle.html">
+       3.3.1. ComponentのStateとライフサイクル
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="event_handling.html">
+       3.3.2. イベント処理
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="condition_render.html">
+       3.3.3. 条件付きレンダー
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="list%26key.html">
+       3.3.4. リストとkey
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="form.html">
+       3.3.5. フォーム
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="liftup.html">
+       3.3.6. stateのリフトアップ
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="composition.html">
+       3.3.7. コンポジション vs 継承
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       3.3.8. Reactの流儀
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../python/index.html">
+     3.4. Python
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../python/matplotlib.html">
+       3.4.1. matplotlib
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../machine_learning_intro/index.html">
+     3.5. 機械学習概論ノート
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note01.html">
+       3.5.1. 第１回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note02.html">
+       3.5.2. 第２回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note03.html">
+       3.5.3. 第３回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note04.html">
+       3.5.4. 第４回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note05.html">
+       3.5.5. 第５回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note06.html">
+       3.5.6. 第６回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note07.html">
+       3.5.7. 第７回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note08.html">
+       3.5.8. 第８回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note09.html">
+       3.5.9. 第９回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note10.html">
+       3.5.10. 第１０回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note11.html">
+       3.5.11. 第１１回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note12.html">
+       3.5.12. 第１２回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note13.html">
+       3.5.13. 第１３回
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../machine_learning_intro/note14.html">
+       3.5.14. 第１４回
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../project/index.html">
+   4. プロジェクト
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../project/textron/index.html">
+     4.1. Textron
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../project/textron/textron.html">
+       4.1.1. Textronとは
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../project/shisohca/index.html">
+     4.2. SHISOHCA
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../project/shisohca/eigen_bases/index.html">
+       4.2.1. Eigen_States
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+      <label for="toctree-checkbox-14">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../project/shisohca/eigen_bases/plan.html">
+         企画：EigenStates
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../project/phrase/index.html">
+     4.3. 言葉の断片たち
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+    <label for="toctree-checkbox-15">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../project/phrase/lyrics/index.html">
+       4.3.1. 歌詞
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+      <label for="toctree-checkbox-16">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../project/phrase/lyrics/%E3%81%95%E3%82%88%E3%81%AA%E3%82%89%E6%9C%AA%E6%9D%A5.html">
+         さよなら未来
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../project/phrase/novel/index.html">
+       4.3.2. 小説
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+      <label for="toctree-checkbox-17">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../project/phrase/novel/note001.html">
+         家長の心配 / カフカ
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/tech/React/the_react.rst.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   モックから始めよう
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step1-ui">
+     Step1: UIをコンポーネントの階層構造に落としこむ
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step2-react">
+     Step2: Reactで静的なバージョンを作成する
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step3-uistate">
+     Step3: UI状態を表現する必要十分なstateを決定する
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step4-state">
+     Step4: stateをどこに配置するべきなのかを明確にする
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step5">
+     Step5: 逆方向のデータフローを追加する
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   終わりに
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="react">
+<h1><span class="section-number">3.3.8. </span>Reactの流儀<a class="headerlink" href="#react" title="Permalink to this headline">¶</a></h1>
+<p>ここでは、検索可能な商品データ表をReactで作っていく様子を通して、Reactのアプリケーション開発の流儀（そして後に分かるようにここでの考え方は、Reactのみならず、高度にモジュール化されたアプリケーション開発全般について応用可能である）を学んでいこう。</p>
+<div class="section" id="id1">
+<h2>モックから始めよう<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>すでにJSON APIが実装済みで、デザイナーからもデザインモックがもらえているとする。JSON APIは、次のようなデータを返してくるとする。</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>[
+    {category: &quot;Sporting Goods&quot;, price: &quot;$49.99&quot;, stocked: true, name: &quot;Football&quot;},
+    {category: &quot;Sporting Goods&quot;, price: &quot;$9.99&quot;, stocked: true, name: &quot;Baseball&quot;},
+    {category: &quot;Sporting Goods&quot;, price: &quot;$29.99&quot;, stocked: false, name: &quot;Basketball&quot;},
+    {category: &quot;Electronics&quot;, price: &quot;$99.99&quot;, stocked: true, name: &quot;iPod Touch&quot;},
+    {category: &quot;Electronics&quot;, price: &quot;$399.99&quot;, stocked: false, name: &quot;iPhone 5&quot;},
+    {category: &quot;Electronics&quot;, price: &quot;$199.99&quot;, stocked: true, name: &quot;Nexus 7&quot;}
+];
+</pre></div>
+</div>
+<div class="section" id="step1-ui">
+<h3>Step1: UIをコンポーネントの階層構造に落としこむ<a class="headerlink" href="#step1-ui" title="Permalink to this headline">¶</a></h3>
+<p>まず最初に行うのは、モックを形作っている各コンポーネント（構成要素）を囲んで、それぞれに名前を付けていくこと。単一のコンポーネントに括るべき範囲を見つけるための一つの指針に、 <strong>単一責任の原則</strong> がある。これは、新しい関数やオブジェクトをいつ作るのかを決めるときと同じ手法である。</p>
+<div class="line-block">
+<div class="line">これ即ち、 <strong>一つのコンポーネントは理想的には一つのことだけをすべきだ</strong> ということである。開発を進める上でコンポーネントが肥大化してしまった場合には、小さなコンポーネントに分割することを検討するべきである。</div>
+</div>
+<div class="line-block">
+<div class="line">JSONのデータモデルをユーザに向けて表示することはよく在る。 <strong>モデルが正しく構築されていれば、UI（つまりはコンポーネントの構造）にもそのデータ構造がうまくマッピングされる</strong> ということが分かるであろう。これは、<strong>UIとデータモデルが同じ情報の構造をもつ傾向が在る</strong> ためである。UIを分割して、それぞれのコンポーネントがデータモデルの、厳密に一部分だけを表現するように落とし込んで見る。</div>
+</div>
+<div class="line-block">
+<div class="line">モック内にコンポーネントを特定できたら、階層構造に並べてみる。モックにおける階層構造を、原則的には、Reactコンポーネントの階層構造にもそのまま移植すれば良い。</div>
+</div>
+</div>
+<div class="section" id="step2-react">
+<h3>Step2: Reactで静的なバージョンを作成する<a class="headerlink" href="#step2-react" title="Permalink to this headline">¶</a></h3>
+<p>さて、コンポーネントの階層構造が決まったら、アプリの実装に取り掛かる。</p>
+<div class="line-block">
+<div class="line">最初は、データモデルを受け取ってUIの描画だけを行い、ユーザからは操作できないというバージョンを作るのがもっとも簡単であり、またこの工程が重要である。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>表示の実装とユーザ操作の実装を切り離しておくことは重要である。</strong> 静的な（ユーザが操作できない）バージョンを作る際はコーディングの量が多い代わりに考えることが少なく、ユーザ操作を実装するときには考えることが多い代わりにコーディングの量は少ないからである。概してこのような傾向を持つ。</div>
+</div>
+<div class="line-block">
+<div class="line">データモデルを描画するだけの機能を持った静的なバージョンのアプリを作る際は、他のコンポーネントを再利用しつつそれらにpropsを通じてデータを渡す形で自分のコンポーネントを組み上げていく。propsは親から子へとデータを渡すための手段である。静的なバージョンを作る上では、Reactの流儀として、 <strong>stateを一切つかわないこと。</strong> stateはユーザ操作や時間経過などで動的に変化するデータを扱うために確保されている機能である。そのような関心の分離を徹底していれば、今回のような静的なアプリケーションを実装する際にstateに触れる必要はまったくないことが分かるだろう。</div>
+</div>
+<div class="line-block">
+<div class="line">コンポーネントをコーディングしていくときは、トップダウンで作っても、ボトムアップで作っても問題ない。つまり、高い階層にあるコンポーネント（たとえばFilterableProductTable）から作り始めても、低い階層にあるコンポーネント（ProductRowなど）から作り始めても、どちらでも構わない。それぞれの方式にメリットとデメリットがあり、それらを理解した上で適切な方を選ぶということである。傾向としては、シンプルなアプリでは通常トップダウンで作ったほうが楽なケースが多いが、大きなプロジェクトでは開発をしながらテストを書き、ボトムアップで進めるほうがより簡単である。</div>
+</div>
+<div class="line-block">
+<div class="line">ここまでのステップで、データモデルを描画する再利用可能なコンポーネントのライブラリが手に入る。このアプリは静的なバージョンなので、各コンポーネントはrender()メソッドだけを持つことになる。階層構造の中で最上位のコンポーネント（たとえばFilterableProductTable）が、データモデルをpropsとして受け取ることになるだろう。もととなるデータモデルを更新して再度、ReactDOM.render()を呼び出すと、UIが更新されることになる。このやり方なら、複雑なことをしていないので、UIがどのように更新されて、どこを変更すればよいのか、理解しやすくなる。Reactの単方向データフローにより、全てがモジュール化された高速な状態で保たれる。</div>
+</div>
+</div>
+<div class="section" id="step3-uistate">
+<h3>Step3: UI状態を表現する必要十分なstateを決定する<a class="headerlink" href="#step3-uistate" title="Permalink to this headline">¶</a></h3>
+<p>UIをインタラクティブなものにするために、元となっているデータモデルを更新できるようにする必要が在る。これはReactではstateをつかって実現する。</p>
+<div class="line-block">
+<div class="line">適切に開発を進めていくにあたり、そのアプリに求められている更新可能な状態の最小構成を、最初に考えて決めておくほうが良い。個々で重要なのは、 <strong>DRYの原則</strong> である。 <strong>アプリケーションが必要としている最小限の状態を把握しておき、他に必要なものが出てきたらそのとき計算すれば良いのである</strong> 。たとえば、TODOリストを作る際、TODOの各項目を配列で保持するだけにし、個数のカウント用に別のstate変数を持たないようにする。代わりに、TODOの項目数を表示したいのであれば、配列のlengthゲッターを使えばよい、という考え方である。</div>
+</div>
+<div class="line-block">
+<div class="line">今回のサンプルアプリを形作る全てのデータについて考えてみる。つぎのようなデータが在る。</div>
+</div>
+<ul class="simple">
+<li><p>元となる商品のリスト</p></li>
+<li><p>ユーザが入力した検索文字列</p></li>
+<li><p>チェックボックスの値</p></li>
+<li><p>フィルタ済みの商品のリスト</p></li>
+</ul>
+<p>それぞれについて見ていき、どれがstateになりうるのかを考えてみる。各データについて、３つの問を立ててみる。</p>
+<ol class="arabic simple">
+<li><p>親からpropsを通じて与えられたデータか？</p></li>
+<li><p>時間経過で変化しないままでいるデータか？</p></li>
+<li><p>コンポーネント内にある他のpropsやstateを使って算出可能なデータか？</p></li>
+</ol>
+<p>これらの全てを通過したならば、それはほとんどstateであると言い切ってよいだろう。元となる商品のリストはpropsから渡されるのでこれはstateではない。検索文字列とチェックボックスは時間の経過の中で変化し、また算出することもできないため、stateだと思われる。最後に、フィルタ済みの商品のリストはstateではない。なぜならば、元となる商品のリストと検索文字列とチェックボックスの値を組み合わせることでフィルタ済みの商品のリストを算出することが可能だからである。</p>
+<div class="line-block">
+<div class="line">というわけで、stateと呼べるのは次の２つ：</div>
+</div>
+<ul class="simple">
+<li><p>ユーザが入力した検索文字列</p></li>
+<li><p>チェックボックスの値</p></li>
+</ul>
+</div>
+<div class="section" id="step4-state">
+<h3>Step4: stateをどこに配置するべきなのかを明確にする<a class="headerlink" href="#step4-state" title="Permalink to this headline">¶</a></h3>
+<p>さて、前節の考察でstateの最小構成が明確になった。次は、どのコンポーネントがstateを変化させるのか、つまりはstateを所有するのかを明確にしていく。</p>
+<p>アプリの各stateについて、次の項目を確認していく。
+* そのstateを使って表示を行う全てのコンポーネントを確認する。
+* 共通の親コンポーネントをみつける（その階層構造の中で、あるstateを必要としている全てのコンポーネントの上位にある単一のコンポーネントのことである。）
+* 共通の親コンポーネントか、その階層構造でさらに上位の別のコンポーネントがstateを持っているべきである。
+* もしstateを持つにふさわしいコンポーネントを見つけられなかった場合は、 <strong>stateを保持するためだけの新しいコンポーネントを作り、</strong> 階層構造の中で既に見つけておいた共通の親コンポーネントの上に配置する。</p>
+<p>それでは、この一般的戦略をサンプルアプリにも適用してみる。</p>
+<ul class="simple">
+<li><p>ProductTableは商品リストをフィルタする必要があり、SearchBarは検索文字列とチェック状態を表示する必要が在る。</p></li>
+<li><p>共通の親コンポーネントはFilterableProductTableである。</p></li>
+<li><p>概念的にも、検索文字列とチェック状態がFilterbleProductTableに配置されることは妥当である。</p></li>
+</ul>
+<p>良い感じである。stateをFilterableProductTableの中に配置することが決まった。これが決まれば、あとはFilterableProductTableのconstructorからstateを追加し、filterTextとisStockOnlyをProductTableとSearchBarにpropsとして渡す。最後に、これらのpropsを使ってProductTableのフィルタ処理を行い、SearchBarのフォームにも値を埋める。</p>
+</div>
+<div class="section" id="step5">
+<h3>Step5: 逆方向のデータフローを追加する<a class="headerlink" href="#step5" title="Permalink to this headline">¶</a></h3>
+<p>ここまでで、propsとstateが階層構造を流れ落ちていく関数として、正しく描画を行うアプリを作ることができた。それでは次に、別の方向のデータフローもサポートしてみることにする。階層構造の奥深くにあるフォームのコンポーネントが、FilterableProductTableにあるstateを更新できるようにする。</p>
+<div class="line-block">
+<div class="line">試しに、現在のバージョンのサンプルで文字を打ち込んだり、チェックボックスを切り替えてみると、Reactがその入力を無視することが分かる。これは意図的な挙動で、inputのprops.valueが、常にFilterableProductTableから渡されたstateと同じ値になるようにセットしてあるのである。</div>
+</div>
+<div class="line-block">
+<div class="line">それでは、どんな挙動に成ってほしいのかを考えてみると、ユーザがフォームを変更するたびにユーザ入力を反映するようにstateを更新したいということになる。コンポーネントのstateを更新できるのは自分自身だけであるべきなので、FilterableProducttableはSearchBarにコールバックを渡しておいて、stateを更新したいときに実行してもらうようにする。入力のキーストロークのたびにコールされるonChangeイベントを利用するとよい。このコールバックを実行されたFilterableProductTabelはsetState()をコールし、その結果としてアプリの状態と描画が更新されるようになる。</div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>終わりに<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>これで、Reactをつかってコンポーネントやアプリケーションを構築するときの考え方が身についたのではないだろうか。極めて明示的で、極めて明快で、極めて基礎的なモジュール化オブジェクト指向に則ったコーディングであったことが分かればよい。</p>
+</div>
+</div>
+
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="composition.html" title="previous page"><span class="section-number">3.3.7. </span>コンポジション vs 継承</a>
+    <a class='right-next' id="next-link" href="../python/index.html" title="next page"><span class="section-number">3.4. </span>Python</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By youri nichicough<br/>
+        
+            &copy; Copyright 2021, shisohca.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+
+
+
+  </body>
+</html>

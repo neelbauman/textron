@@ -1,0 +1,3 @@
+npx babel --watch document/_static_src/ --out-dir document/_static/ --presets react-app/prod &
+
+npx electron . &

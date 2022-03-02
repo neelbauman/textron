@@ -1,0 +1,14 @@
+{% extends "!layout.html" %}
+{% block extrahead %}
+
+{% endblock %}
+
+
+{% block footer %}
+{% if sourcename == "index.rst.txt" %}
+<!-- <script type="text/javascript" async src="_static/demo.js"></script> -->
+<!-- {% elif sourcename == "physics/quantum_espresso/convex_hull.rst.txt" %}
+<script type="text/javascript" async src="../../_static/physics/quantum_espresso/convex_hull.js"></script> -->
+{% else %}
+{% endif %}
+{% endblock %}
